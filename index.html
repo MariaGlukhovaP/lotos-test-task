@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lotos Test Task</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header__text-container">
+        <h1>Заголовок h1</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <img
+        class="header__image"
+        src="img/image.png"
+        alt="Header image"
+        title="The road in the forest"
+      />
+    </header>
+    <main>
+      <section class="interactive-section">
+        <h2>Заголовок h2</h2>
+        <div class="interactive-section__container">
+          <form>
+            <!-- Блок с диапазоном -->
+            <div>
+              <fieldset>
+                <legend>Выберите диапазон</legend>
+                <div class="interactive-section__number-input-container">
+                  <input
+                    type="number"
+                    id="from"
+                    class="from"
+                    name="from"
+                    placeholder="от 0"
+                    min="0"
+                    max="150"
+                  />
+                  <input
+                    type="number"
+                    id="to"
+                    class="to"
+                    name="to"
+                    placeholder="до 150"
+                    min="0"
+                    max="150"
+                  />
+                </div>
+                <div class="interactive-section__number-range-container">
+                  <input
+                    type="range"
+                    id="range-from"
+                    class="range-from"
+                    name="range-from"
+                    min="0"
+                    max="150"
+                  />
+                  <input
+                    type="range"
+                    id="range-to"
+                    class="range-to"
+                    name="range-to"
+                    min="0"
+                    max="150"
+                  />
+                </div>
+              </fieldset>
+            </div>
+            <!-- Блок с select и radio -->
+            <div class="interactive-section__row">
+              <div>
+                <label for="select">Выберите select</label>
+                <select class="select" id="select" name="select" required>
+                  <option value="" disabled selected>Option</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div>
+                <fieldset>
+                  <legend>Выберите radio</legend>
+                  <label for="js">
+                    <input
+                      id="js"
+                      type="radio"
+                      value="JavaScript"
+                      name="language"
+                    />JavaScript
+                  </label>
+                  <label for="php">
+                    <input
+                      id="php"
+                      type="radio"
+                      value="PHP"
+                      name="language"
+                    />PHP
+                  </label>
+                  <label for="c#">
+                    <input id="c#" type="radio" value="C#" name="language" />C#
+                  </label>
+                </fieldset>
+              </div>
+            </div>
+            <!-- Блок с ФИО и возрастом -->
+            <div class="interactive-section__row">
+              <div>
+                <label for="fio">Введите ФИО</label>
+                <input
+                  class="fio"
+                  type="text"
+                  id="fio"
+                  name="fio"
+                  placeholder="Placeholder"
+                />
+                <span class="fio-error">Некорректное ФИО</span>
+              </div>
+              <div>
+                <label for="age">Введите возраст в цифрах</label>
+                <input
+                  class="age"
+                  type="number"
+                  id="age"
+                  name="age"
+                  placeholder="Placeholder"
+                />
+              </div>
+            </div>
+            <!-- Блок с checkbox -->
+            <div class="interactive-section__row">
+              <label for="required">
+                <input
+                  class="required"
+                  type="checkbox"
+                  id="required"
+                  name="required"
+                  required
+                />Обязательный checkbox
+              </label>
+              <label for="unrequired">
+                <input
+                  class="unrequired"
+                  type="checkbox"
+                  id="unrequired"
+                  name="unrequired"
+                />Необязательный checkbox
+              </label>
+            </div>
+            <!-- Кнопка отправки -->
+            <button class="interactive-section__button" type="submit">
+              Отправить
+            </button>
+          </form>
+        </div>
+      </section>
+      <section>
+        <h3>Заголовок h3</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </section>
+      <div class="overplay"></div>
+      <section class="modal-box">
+        <p class="modal-box__description">Результат отправки</p>
+        <p>Диапазон: <span class="modal-box__range"></span></p>
+        <p>Select: <span class="modal-box__select"></span></p>
+        <p>Radio: <span class="modal-box__radio"></span></p>
+        <p>ФИО: <span class="modal-box__fio"></span></p>
+        <p>Возраст: <span class="modal-box__age"></span></p>
+        <p>Выбранные checkbox: <span class="modal-box__checkbox"></span></p>
+      </section>
+    </main>
+    <footer>
+      <p>© Глухова Мария Павловна, 2004-<span class="currentYear"></span></p>
+    </footer>
+  </body>
+</html>
